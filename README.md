@@ -72,42 +72,84 @@ The system is built in four main layers that work together to transform raw thre
 
 **Visualization Engine:** Renders intelligence in intuitive, interactive formats for analysts
 ```
-
 ## 🛠️ Tech Stack
-[List of technologies, frameworks, and tools used]
+
+### Backend
+- **Python 3.9+** - Core programming language
+- **Flask/FastAPI** - Web framework for REST API
+- **spaCy** - Natural Language Processing library for entity extraction
+- **Transformers (Hugging Face)** - Pre-trained models for text analysis
+- **scikit-learn** - Machine learning for clustering and classification
+- **pandas** - Data manipulation and analysis
+
+### Frontend
+- **React** - Interactive user interface
+- **Tailwind CSS** - Modern, responsive styling
+- **Recharts/D3.js** - Data visualization and interactive charts
+- **Axios** - API communication
+
+### Data & Intelligence
+- **MITRE ATT&CK Framework** - Standardized knowledge base of adversary tactics
+- **Threat intelligence feeds** - Sample APT reports and IOCs
+- **JSON/CSV** - Data storage for APT profiles and historical data
+
+### Deployment
+- **Vercel/Netlify** - Frontend hosting
+- **Render/Railway** - Backend API hosting
+- **GitHub** - Version control and code repository
+
+---
 
 ## ✨ Key Features
-[Main capabilities of the system]
+
+### 1. **Automated Threat Report Processing**
+Upload PDFs, paste text, or input URLs - the system extracts and processes threat intelligence automatically
+
+### 2. **AI-Powered Entity Extraction**
+Identifies and catalogs:
+- Malware names and variants
+- IP addresses and domains (IOCs)
+- CVE identifiers (known vulnerabilities)
+- Tools and techniques used by attackers
+- Target sectors and organizations
+
+### 3. **MITRE ATT&CK Mapping**
+Automatically maps extracted tactics, techniques, and procedures (TTPs) to the industry-standard MITRE ATT&CK framework, showing exactly how attackers operate
+
+### 4. **APT Attribution with Confidence Scoring**
+Machine learning analysis attributes attacks to specific threat groups (APT28, Lazarus, APT41, etc.) with percentage confidence levels
+
+### 5. **Campaign Timeline Visualization**
+Interactive timeline showing attack progression, related incidents, and patterns over time
+
+### 6. **Threat Actor Profiles**
+Comprehensive cards for each APT group including:
+- Origin country and sponsoring organization
+- Historical targets and motivations
+- Common tools and techniques
+- Recent campaigns and activity
+
+### 7. **Predictive Intelligence**
+AI analyzes patterns to predict:
+- Likely next targets by sector/region
+- Emerging attack techniques
+- Risk scores for different industries
+
+### 8. **Interactive Dashboard**
+Real-time threat landscape with:
+- Global threat map
+- TTP heatmap (most common attack methods)
+- Sector vulnerability analysis
+- Trending APT groups
+
+---
 
 ## 🚀 Installation & Setup
-[How to get the project running]
 
-## 📊 Usage
-[How to use the tool with examples]
+### Prerequisites
+- Python 3.9 or higher
+- Node.js 16+ and npm
+- Git
 
-## 🧠 AI/ML Components
-[Description of the AI models and algorithms used]
-
-## 🎨 Demo
-[Screenshots, video links, or live demo URL]
-
-## 📈 Results & Performance
-[Metrics, accuracy, processing times]
-
-## 🔮 Future Enhancements
-[What you'd add with more time]
-
-## 🙏 Acknowledgments
-[Data sources, APIs, frameworks credited]
-
-## 📝 Development Log
-### Day 1
-- [x] Task 1
-- [x] Task 2
-
-### Day 2
-- [ ] Task 1
-- [ ] Task 2
-
-## 📄 License
-[License type if applicable]RetryClaude does not have the ability to run the code it generates yet.Claude can make mistakes. Please double-check responses.
+### Backend Setup
+```bash
