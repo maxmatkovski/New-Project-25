@@ -9,10 +9,69 @@ This project aims to accelerate threat intelligence analysis through AI automati
 ![alt text](image.png)
 
 ## 🔍 Overview
-[High-level description of what the project does]
+
+The APT Threat Intelligence Analyzer is an AI-powered platform that automatically processes cybersecurity threat reports and transforms them into actionable intelligence. 
+
+**What it does:**
+- **Ingests** threat intelligence from various sources (PDFs, articles, security reports)
+- **Extracts** key information using Natural Language Processing (NLP) - teaching computers to understand human language
+- **Analyzes** attack patterns and matches them against known nation-state hacking groups
+- **Visualizes** the threat landscape through interactive dashboards showing who's attacking, how they're doing it, and what they're targeting
+- **Predicts** potential future targets based on historical attack patterns
+
+Instead of security analysts spending 4-6 hours manually reading through a report and connecting the dots, this system does it in seconds - identifying the threat actor, their methods, and providing strategic recommendations for defense. Think of it as an AI assistant that reads thousands of pages of hacker intelligence and instantly tells you "this looks like Russian APT28, they're targeting energy sectors, and here's what they'll likely do next."
+
 
 ## 🏗️ Architecture
-[Diagram or description of system components]
+
+The system is built in four main layers that work together to transform raw threat reports into actionable intelligence:
+
+### System Flow
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     INPUT LAYER                              │
+│  Threat Reports • Security Blogs • Vendor Advisories • URLs  │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+┌──────────────────────────▼──────────────────────────────────┐
+│                     AI PROCESSING ENGINE                      │
+│  • NLP Text Analysis (understands security terminology)      │
+│  • Entity Extraction (finds IPs, malware names, tools)       │
+│  • Pattern Recognition (identifies attack signatures)        │
+│  • Machine Learning Classification (groups similar threats)  │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+┌──────────────────────────▼──────────────────────────────────┐
+│                  INTELLIGENCE LAYER                          │
+│  • MITRE ATT&CK Mapper (matches to known attack techniques) │
+│  • APT Attribution Engine (identifies threat actor)         │
+│  • Campaign Clustering (connects related attacks)           │
+│  • Risk Scoring (calculates threat severity)                │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+┌──────────────────────────▼──────────────────────────────────┐
+│                  PRESENTATION LAYER                          │
+│  • Interactive Dashboard (visual threat landscape)          │
+│  • APT Profile Cards (threat actor information)             │
+│  • Attack Timeline (chronological view of campaigns)        │
+│  • Threat Analytics (charts, graphs, statistics)            │
+│  • REST API (for integration with other tools)              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Component Breakdown
+
+**Input Handler:** Accepts multiple formats and extracts clean text for analysis
+
+**NLP Engine:** Processes natural language to understand context and extract security-relevant entities
+
+**Knowledge Base:** Contains APT profiles, historical attack data, and MITRE ATT&CK framework
+
+**Attribution System:** Compares extracted indicators against known APT patterns to identify threat actors
+
+**Visualization Engine:** Renders intelligence in intuitive, interactive formats for analysts
+```
 
 ## 🛠️ Tech Stack
 [List of technologies, frameworks, and tools used]
